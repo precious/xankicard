@@ -1,5 +1,5 @@
-xankicard - translates X PRIMARY selection fron en to ru and
+xankicard - translates X PRIMARY selection from en to ru and
 	stores appropriate card to anki's deck;
-	in xankicard.sh type path to the directory with this scripts and
+	in xankicard.sh type path to the directory with these scripts and
 	path to deck
 
