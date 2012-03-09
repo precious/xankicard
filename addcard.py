@@ -25,5 +25,11 @@ fact['Front'] = unicode(args.front,'utf-8')
 fact['Back'] = unicode(args.back,'utf-8')
 fact.tags = u'selection'
 
+# chech whether the card is already in the deck
+factIds, cardIds = deck.findCardsMatchingFilters(
+	[{'scope': 'fact','field': 'front','value': fact['Front'],'is_neg': False}])
+if factIds:
+	sys.exit(0)
+
 deck.addFact(fact)
 deck.save()
