@@ -28,8 +28,12 @@ params = urllib.urlencode({
 request = urllib2.Request(url + "?" + params,None,headers)
 response = urllib2.urlopen(request)
 js = re.sub(r",\s*(?=,|])",',""',response.read())
-data = json.loads(js)
-translated = data[0][0][0];
+try:
+	data = json.loads(js)
+	translated = data[0][0][0];
+except:
+	print >> sys.stderr, 'An error occured while translating text'
+	sys.exit(1)
 
 if args.json:
 	print data
