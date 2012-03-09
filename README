@@ -1,5 +1,8 @@
 xankicard - translates X PRIMARY selection from en to ru and
 	stores appropriate card to anki's deck;
 	in xankicard.sh type path to the directory with these scripts and
-	path to deck
+	path to deck;
+	don't use this scipt when anki is launched, because anki locks db;
+	if you wish to create both en-ru and ru-en cards each time, you
+	should set appropriate option to True in addcard.py (line 21)
 
